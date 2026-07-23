@@ -6,6 +6,8 @@
 
 **Find the 3 bugs that make your TradingView backtest look great and your live trading fail.**
 
+![PineLint Demo](assets/demo.png)
+
 PineLint scans your Pine Script code for documented, known bugs: repainting, look-ahead bias, and missing risk management. It does not predict profitability. It does not have trading expertise. It finds code bugs — facts, not opinions.
 
 ## What It Detects
