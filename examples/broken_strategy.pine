@@ -1,0 +1,19 @@
+//@version=5
+// BROKEN STRATEGY — Contains repainting, look-ahead, and missing stop loss.
+// Use this to test Strategy Forge: /strategy-forge audit examples/broken_strategy.pine
+strategy("Broken MACD Strategy", overlay=true)
+
+// BUG 1: Repainting — requesting lower timeframe data
+fastMA = request.security(syminfo.tickerid, "5", ta.sma(close, 12))
+slowMA = request.security(syminfo.tickerid, "5", ta.sma(close, 26))
+macd = fastMA - slowMA
+signal = ta.sma(macd, 9)
+
+// BUG 2: Look-ahead bias — using close[0] for entry
+if ta.crossover(macd, signal) and close > close[1]
+    strategy.entry("Long", strategy.long)
+
+if ta.crossunder(macd, signal)
+    strategy.close("Long")
+
+// BUG 3: No stop loss, no take profit, no risk management

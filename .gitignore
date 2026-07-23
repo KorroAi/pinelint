@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.env
+*.db
+.DS_Store
+venv/
+server/templates/
