@@ -106,7 +106,7 @@ def audit_file(filepath):
     for b in bugs:
         by_type.setdefault(b['type'], []).append(b)
 
-    severity_icons = {'critical': '🔴', 'warning': '🟡'}
+    severity_icons = {'critical': '[CRIT]', 'warning': '[WARN]'}
 
     for btype in ['repainting', 'lookahead', 'risk']:
         if btype in by_type:
