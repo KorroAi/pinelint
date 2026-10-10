@@ -91,3 +91,10 @@ Bug 3: MISSING STOP LOSS (line 14)
 ## License
 
 MIT — see [LICENSE](LICENSE)
+
+---
+
+<p align="center">
+  <b>Built by <a href="https://korrocorp.com">Korrocorp</a></b> — games, apps and AI tools.<br>
+  <a href="https://korrocorp.com">korrocorp.com</a> · <a href="https://x.com/korrocorp">X @korrocorp</a> · <a href="https://discord.gg/RSBHHjxnYt">Discord</a> · <a href="https://github.com/KorroAi">GitHub</a>
+</p>
